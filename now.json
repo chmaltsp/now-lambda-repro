@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "./api/routes/**/*.ts",
+      "use": "@now/node@canary"
+    }
+  ],
+  "routes": [
+    { "src": "/api/(?<first>[^/]*)$", "dest": "/api/routes/$first/index.ts" }
+  ]
+}
